@@ -1,1 +1,81 @@
 
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>
+   动态DOM编程起点和基础
+</title>
+
+  <style type="text/css">
+    body {
+        margin: 0;
+        padding: 0;
+    }
+	div{
+    position: absolute;
+    display: inline-block;
+	 width:100px;
+	 height:100px;
+	 background-color:gray;
+     text-align: center;
+     margin-right: 16px;
+     margin-bottom: 16px;
+     border-radius: 50%;
+     border: 1px solid rgb(0, 200, 0);
+     background-color: rgba(100,100,100, 0.1);
+     
+	}
+  div p {
+    font-size: 13px;
+    margin: auto;
+    padding: 10%;
+    color: rgb(255,255,255);
+    text-align: center;
+  }
+  </style>
+
+ </head>
+ <body>
+    <script type="text/javascript">
+        var bodyWidth = window.innerWidth ; var bodyHeight = window.innerHeight ; document.body.style.width = bodyWidth + 'px'; document.body.style.height = bodyHeight + 'px'
+        var s = '绝代有佳人，幽居在空谷。自云良家子，零落依草木。';
+        <!--
+         for(var i=0;i<100;i++){
+            var divDom = document.createElement('div') ;
+            var pDom = document.createElement('p');
+              pDom.textContent = s;
+              divDom.appendChild(pDom);
+              document.body.appendChild(divDom) ;
+              randomPositionDiv(divDom);
+              divDom.onmouseover = function(){
+                      // window.innerHeight;window.innerWidth;
+                        var x = Math.floor(Math.random()*bodyWidth);
+                        var y = Math.floor(Math.random()*bodyHeight);
+                        if (y >=bodyHeight-100) {
+                        y=bodyHeight-130;
+                        }
+                        if (x >=bodyWidth-100){
+                        x = bodyWidth-130;
+                       }
+                        this.style.left = x + 'px';
+                        this.style.top = y + 'px';
+              }
+         }
+         function randomPositionDiv(){
+                    var x = Math.floor(Math.random()*bodyWidth);
+                    var y = Math.floor(Math.random()*bodyHeight);
+                    if (y >=bodyHeight-110) {
+                        y=bodyHeight-140;
+                    }
+                    if (x >=bodyWidth-110){
+                      x = bodyWidth-140;
+                    }
+                    divDom.style.left = x + 'px';
+                    divDom.style.top = y + 'px';
+            }
+          
+        //-->
+        </script>
+ </body>
+</html>
